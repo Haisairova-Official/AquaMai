@@ -13,10 +13,10 @@ namespace AquaMai.Mods.Fancy;
 [ConfigSection(
     name: "【危险功能】力大砖飞",
     en: "Full-scene background replacement. Static injection.",
-    zh: "适用于便捷魔改的自定义全场景图片。警告：可能对游戏造成未知性能影响")]
+    zh: "适用于便捷魔改的自定义全场景图片。警告：可能对游戏造成未知性能影响，可能与其他模组冲突？")]
 public class CustomSkinsPlusStatic
 {
-    [ConfigEntry(name: "目录")]
+    [ConfigEntry(name: "资源目录")]
     private static string skinsDir = "LocalAssets/Skins";
 
     private static readonly Dictionary<string, Sprite> SpritePool = new Dictionary<string, Sprite>();
