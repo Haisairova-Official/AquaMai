@@ -12,7 +12,7 @@ namespace AquaMai.Mods.Fancy;
 
 [ConfigSection(
     name: "力大砖飞",
-    en: "[Dangerous] Full-scene background replacement. Static injection.",
+    en: "[Dangerous] Full-scene texture / sprite replacement. Static injection.",
     zh: "【危险功能】适用于便捷魔改的自定义全场景图片。警告：可能对游戏造成未知性能影响，可能与其他模组冲突？")]
 public class CustomSkinsPlusStatic
 {
