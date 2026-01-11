@@ -28,9 +28,12 @@ try {
         $gitDescribe = "$gitDescribe-$branch"
     }
 
-    $isDirty = git status --porcelain
-    if ($isDirty) {
-        $gitDescribe = "$gitDescribe-DWR"
+    # Skip dirty check in CI environment
+    if (-not $env:CI -and -not $env:GITHUB_ACTIONS) {
+        $isDirty = git status --porcelain
+        if ($isDirty) {
+            $gitDescribe = "$gitDescribe-DWR"
+        }
     }
 
     $buildDate = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
